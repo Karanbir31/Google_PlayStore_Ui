@@ -5,17 +5,20 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="320dp"
-        android:padding="12dp"
-        android:background="@drawable/rcv_header_bg">
+        android:layout_height="240dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/rcv_header_bg"
+        android:clipToPadding="true">
 
         <ImageView
             android:id="@+id/rcvHeaderImagBg"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="16dp"
             android:contentDescription="top"
             android:scaleType="centerCrop"
             android:src="@drawable/rcv_google_playstore_hearder"
+            app:layout_constraintBottom_toTopOf="@id/rcvHeaderTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -24,11 +27,11 @@
             android:id="@+id/rcvHeaderTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
             android:text="Inspiring apps made in India"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:paddingHorizontal="16dp"
             app:layout_constraintBottom_toTopOf="@+id/rcvHeaderText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -37,8 +40,9 @@
             android:id="@+id/rcvHeaderText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vocal for local"
+            android:layout_marginBottom="8dp"
             android:paddingHorizontal="16sp"
+            android:text="Vocal for local"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
