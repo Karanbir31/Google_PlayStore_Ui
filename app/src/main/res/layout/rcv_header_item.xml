@@ -4,9 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="320dp"
+        android:padding="12dp"
+        android:background="@drawable/rcv_header_bg">
 
         <ImageView
             android:id="@+id/rcvHeaderImagBg"
@@ -14,8 +15,7 @@
             android:layout_height="240dp"
             android:contentDescription="top"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/rcv_google_playstore_hearder"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -24,11 +24,11 @@
             android:id="@+id/rcvHeaderTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
             android:text="Inspiring apps made in India"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="24sp"
             android:textStyle="bold"
+            android:paddingHorizontal="16dp"
             app:layout_constraintBottom_toTopOf="@+id/rcvHeaderText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -37,8 +37,8 @@
             android:id="@+id/rcvHeaderText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
             android:text="Vocal for local"
+            android:paddingHorizontal="16sp"
             android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
