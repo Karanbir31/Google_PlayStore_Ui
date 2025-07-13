@@ -46,7 +46,16 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    // Kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:2.9.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.9.1")
+// Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.9.1")
 }

@@ -3,14 +3,11 @@ package com.example.playstoreuilayout
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.PagerSnapHelper
+import androidx.fragment.app.Fragment
 import com.example.playstoreuilayout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val  snapHelperHead= PagerSnapHelper()
-    private val  snapHelperBody= PagerSnapHelper()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,21 +15,43 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         binding.apply {
-            snapHelperHead.attachToRecyclerView(rcvHeader)
-            snapHelperBody.attachToRecyclerView(rcvBodyApp)
+            setSupportActionBar(toolbar)
 
-            rcvHeader.adapter = RcvHeaderAdapter()
+            bottomNavView.setOnItemSelectedListener  { menuItem ->
 
-            rcvBodyApp.layoutManager =
-                GridLayoutManager(
-                    this@MainActivity,
-                    3, GridLayoutManager.HORIZONTAL,
-                    false
-                )
-            rcvBodyApp.adapter = RcvBodyAppsGridAdapter()
+                when (menuItem.itemId) {
+                    R.id.homeFragment -> {
+                        setCurrentFragment(HomeFragment())
+                        true
+                    }
+                    R.id.topChartsFragment -> {
+                        setCurrentFragment(TopChartsFragment())
+                        true
+                    }
+                    R.id.categoriesFragment -> {
+                        setCurrentFragment(CategoriesFragment())
+                        true
+                    }
+                    else -> {
+                        true
+                    }
+                }
+
+
+            }
 
         }
+    }
 
+
+    private fun setCurrentFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+
+            replace(R.id.fragmentContainer, fragment)
+            commit()
+        }
 
     }
+
+
 }
