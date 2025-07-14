@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.playstoreuilayout.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -14,13 +16,13 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
     private val snapHelperHead = PagerSnapHelper()
-    private val snapHelperBody = PagerSnapHelper()
+
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
@@ -32,19 +34,15 @@ class HomeFragment : Fragment() {
         binding.apply {
 
             snapHelperHead.attachToRecyclerView(rcvHeader)
-            snapHelperBody.attachToRecyclerView(rcvBodyApp)
 
             rcvHeader.adapter = RcvHeaderAdapter()
 
-            rcvBodyApp.layoutManager = GridLayoutManager(
+            rcvBodyApp.layoutManager = LinearLayoutManager(
                 requireContext(),
-                3,
-                GridLayoutManager.HORIZONTAL,
+                LinearLayoutManager.VERTICAL,
                 false
             )
-
-            rcvBodyApp.adapter = RcvBodyAppsGridAdapter()
-
+            rcvBodyApp.adapter = RcvBodyAdapter()
 
         }
     }

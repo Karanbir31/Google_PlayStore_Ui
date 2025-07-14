@@ -25,9 +25,7 @@ class RcvBodyAppsGridAdapter() : RecyclerView.Adapter<RcvBodyAppsGridAdapter.Rcv
 
     override fun onBindViewHolder(holder: RcvViewHolder, position: Int) {
         holder.binding.apply {
-
-
-
+            rcvAppName.text = "Application name $position"
 
         }
     }

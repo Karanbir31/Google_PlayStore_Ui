@@ -30,7 +30,7 @@
             android:paddingHorizontal="16dp"
             android:text="Inspiring apps made in India"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/rcvHeaderText"
             app:layout_constraintEnd_toEndOf="parent"

@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:paddingHorizontal="8dp"
+        android:background="@color/white"
         android:paddingBottom="8dp">
 
         <androidx.cardview.widget.CardView
@@ -24,7 +25,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/chatgpt" />
 
         </androidx.cardview.widget.CardView>
 
@@ -34,9 +35,10 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:paddingVertical="4dp"
-            android:text="app name"
+            android:text="Application Name"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:singleLine="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/rcvAppImageCard"
             app:layout_constraintTop_toTopOf="parent" />
@@ -46,8 +48,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingVertical="4dp"
-            android:text="app name"
+            android:text="Application one line short description"
             android:textSize="14sp"
+            android:singleLine="true"
             app:layout_constraintEnd_toEndOf="@id/rcvAppName"
             app:layout_constraintStart_toStartOf="@id/rcvAppName"
             app:layout_constraintTop_toBottomOf="@id/rcvAppName" />
@@ -57,7 +60,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:paddingVertical="4dp"
-            android:text="app name"
+            android:text="44.2 MB  rating 4.4"
+            android:singleLine="true"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/rcvAppName"

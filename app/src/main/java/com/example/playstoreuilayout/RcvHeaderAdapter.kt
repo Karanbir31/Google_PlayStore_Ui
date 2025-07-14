@@ -21,7 +21,7 @@ class RcvHeaderAdapter() : RecyclerView.Adapter<RcvHeaderAdapter.RcvHeaderViewHo
     override fun onBindViewHolder(holder: RcvHeaderViewHolder, position: Int) {
         holder.binding.apply {
 
-
+            rcvHeaderTitle.append(position.toString())
         }
     }
 }
