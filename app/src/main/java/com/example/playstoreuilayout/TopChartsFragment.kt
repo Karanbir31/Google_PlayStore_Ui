@@ -12,13 +12,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 class TopChartsFragment : Fragment() {
 
     private lateinit var binding: FragmentTopChartsBinding
-    private val tabsList = listOf(
-        "For you",
-        "Top charts",
-        "Children",
-        "Categories"
-    )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -37,18 +30,6 @@ class TopChartsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.apply {
-
-            viewpage2.adapter = ViewPager2Adapter(tabsList, childFragmentManager, lifecycle)
-
-            TabLayoutMediator(tabLayout, viewpage2) { tab, position ->
-                tab.text = tabsList[position]
-                Log.d("tab text", "${tab.text}")
-
-            }.attach()
-        }
-
 
     }
 }

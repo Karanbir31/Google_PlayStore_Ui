@@ -3,19 +3,19 @@
 
 
     <item
-        android:id="@+id/homeFragment"
-        android:icon="@drawable/home_selector"
-        android:title="Home" />
+        android:id="@+id/gamesFragment"
+        android:icon="@drawable/games_selector"
+        android:title="Games" />
 
     <item
-        android:id="@+id/categoriesFragment"
-        android:icon="@drawable/home_selector"
-        android:title="Categories" />
+        android:id="@+id/appsFragment"
+        android:icon="@drawable/apps_selector"
+        android:title="Apps" />
 
      <item
-        android:id="@+id/topChartsFragment"
-        android:icon="@drawable/home_selector"
-        android:title="Categories" />
+        android:id="@+id/booksFragment"
+        android:icon="@drawable/books_selector"
+        android:title="Books" />
 
 
 </menu>

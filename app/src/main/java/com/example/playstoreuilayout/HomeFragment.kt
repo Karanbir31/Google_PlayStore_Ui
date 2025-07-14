@@ -14,10 +14,7 @@ import com.example.playstoreuilayout.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-
     private val snapHelperHead = PagerSnapHelper()
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

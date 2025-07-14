@@ -4,7 +4,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import androidx.viewpager2.widget.ViewPager2
 
 class ViewPager2Adapter(
     private val tabsList: List<String>,
@@ -17,9 +16,10 @@ class ViewPager2Adapter(
 
     override fun createFragment(position: Int): Fragment {
         when(position){
-            1-> return HomeFragment()
+            0-> return HomeFragment()
+            1 -> return TopChartsFragment()
             2-> return CategoriesFragment()
-            else -> CategoriesFragment()
+            3 -> return CategoriesFragment()
         }
         return HomeFragment()
     }

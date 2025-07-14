@@ -13,26 +13,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        setCurrentFragment(HomeFragment())
+        setCurrentFragment(AppsFragment())
+        binding.bottomNavView.selectedItemId = R.id.appsFragment
 
         binding.apply {
             setSupportActionBar(toolbar)
 
-            bottomNavView.setOnItemSelectedListener  { menuItem ->
+            bottomNavView.setOnItemSelectedListener { menuItem ->
 
                 when (menuItem.itemId) {
-                    R.id.homeFragment -> {
-                        setCurrentFragment(HomeFragment())
+                    R.id.gamesFragment -> {
+                        setCurrentFragment(GamesFragment())
                         true
                     }
-                    R.id.topChartsFragment -> {
-                        setCurrentFragment(TopChartsFragment())
+
+                    R.id.appsFragment -> {
+                        setCurrentFragment(AppsFragment())
                         true
                     }
-                    R.id.categoriesFragment -> {
-                        setCurrentFragment(CategoriesFragment())
+
+                    R.id.booksFragment -> {
+                        setCurrentFragment(GamesFragment())
                         true
                     }
+
                     else -> {
                         true
                     }
