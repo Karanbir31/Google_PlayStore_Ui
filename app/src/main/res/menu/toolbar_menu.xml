@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bellIcon"
+        android:icon="@drawable/ic_outline_apps"
+        android:showAsAction="always"
+        android:title="Games" />
+
+    <item
+        android:id="@+id/userIcon"
+        android:icon="@drawable/ic_outline_apps"
+        android:showAsAction="always"
+        android:title="Apps" />
+
+    <item
+        android:id="@+id/booksFragment"
+        android:icon="@drawable/ic_filled_book"
+        android:showAsAction="ifRoom"
+        android:title="Books" />
+
+</menu>

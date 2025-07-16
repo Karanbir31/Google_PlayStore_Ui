@@ -2,4 +2,18 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_grey">#D3D3D3</color>
+
+    <!-- App-specific brand colors -->
+    <color name="light_primary">#6200EE</color>
+    <color name="light_primary_dark">#3700B3</color>
+    <color name="light_secondary">#03DAC6</color>
+    <color name="light_surface">#DDDDE4</color>
+
+    <!-- App-specific brand colors -->
+    <color name="dark_primary">#BB86FC</color>
+    <color name="dark_primary_light">#985EFF</color>
+    <color name="dark_secondary">#03DAC6</color>
+    <color name="dark_surface">#121212</color>
+
 </resources>

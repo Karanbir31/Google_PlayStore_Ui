@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <item
         android:id="@+id/gamesFragment"
         android:icon="@drawable/games_selector"
@@ -11,11 +10,18 @@
         android:id="@+id/appsFragment"
         android:icon="@drawable/apps_selector"
         android:title="Apps" />
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/outline_search_24"
+        android:title="Search" />
+    <item
+        android:id="@+id/offersFragment"
+        android:icon="@drawable/outline_home_24"
+        android:title="Search" />
 
-     <item
+    <item
         android:id="@+id/booksFragment"
         android:icon="@drawable/books_selector"
         android:title="Books" />
-
 
 </menu>

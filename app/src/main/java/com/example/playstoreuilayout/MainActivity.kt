@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.playstoreuilayout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavView.selectedItemId = R.id.appsFragment
 
         binding.apply {
-            setSupportActionBar(toolbar)
+            Glide.with(this@MainActivity).load("https://randomuser.me/api/portraits/women/9.jpg").into(rcvUsersImage)
 
             bottomNavView.setOnItemSelectedListener { menuItem ->
 

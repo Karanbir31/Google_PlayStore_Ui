@@ -8,20 +8,30 @@
         android:layout_height="240dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/rcv_header_bg"
-        android:clipToPadding="true">
+        android:elevation="8dp"
+       >
+<!--        -->
 
-        <ImageView
-            android:id="@+id/rcvHeaderImagBg"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="top"
-            android:scaleType="centerCrop"
-            android:src="@drawable/rcv_google_playstore_hearder"
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
             app:layout_constraintBottom_toTopOf="@id/rcvHeaderTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+            <ImageView
+                android:id="@+id/rcvHeaderImagBg"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="top"
+                android:scaleType="centerCrop"
+                android:src="@drawable/rcv_google_playstore_hearder"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
 
         <TextView
             android:id="@+id/rcvHeaderTitle"
